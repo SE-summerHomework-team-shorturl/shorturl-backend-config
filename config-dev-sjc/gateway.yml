@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: redirect
+          uri: lb://redirect
+          predicates:
+            - Path=/r/**
+        - id: shortener
+          uri: lb://shortener
+          predicates:
+            - Path=/urlmanage/addurl
+        - id: auth
+          uri: lb://auth
+          predicates:
+            - Path=/oauth/token,/.well-known/jwks.json
+        - id: manager
+          uri: lb://manager
+          predicates:
+            - Path=/urlmanage/findurl,/urlmanage/deleteurl
+        - id: user
+          uri: lb://user
+          predicates:
+            - Path=/user/register
