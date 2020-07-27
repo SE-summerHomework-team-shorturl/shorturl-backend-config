@@ -1,0 +1,10 @@
+server:
+  port: 8080
+  shutdown: graceful
+spring:
+  data:
+    mongodb:
+      uri: mongodb://47.101.191.189:27017/short_url_db
+  redis:
+    host: 47.101.191.189
+    port: 6379
