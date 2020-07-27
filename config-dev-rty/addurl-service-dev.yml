@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/shorturl?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+  security:
+    oauth2:
+      client:
+        client-id: client
+        client-secret: client-secret
+        user-authorization-uri: http://localhost:8000/oauth/authorize
+        access-token-uri: http://localhost:8000/oauth/token
+      authorization:
+        check-token-access: http://localhost:8000/oauth/check_token
+      resource:
+        token-info-uri: http://localhost:8000/oauth/check_token
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: addurl-service
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 5s
+        health-check-critical-timeout: 20s
+        instanceId: addurl-service:8011
+        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
