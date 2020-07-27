@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: auth-server
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 5s
+        health-check-critical-timeout: 20s
+        instanceId: auth-server:8000
+        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
