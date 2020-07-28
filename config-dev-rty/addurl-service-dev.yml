@@ -20,7 +20,7 @@ spring:
         token-info-uri: http://127.0.0.1:8000/oauth/check_token
   cloud:
     consul:
-      host: 127.0.0.1
+      host: localhost
       port: 8500
       discovery:
         service-name: addurl-service
