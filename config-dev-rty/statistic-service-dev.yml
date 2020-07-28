@@ -1,7 +1,7 @@
 spring:
   cloud:
     consul:
-      host: localhost
+      host: 127.0.0.1
       port: 8500
       discovery:
         service-name: statistic-service
@@ -17,7 +17,7 @@ spring:
             consumer:
               prefetch: 30
   rabbitmq:
-    host: localhost
+    host: 127.0.0.1
     username: guest
     password: guest
     virtual-host: /
@@ -27,12 +27,12 @@ spring:
         concurrency: 1
         max-concurrency: 10
   datasource:
-    url: jdbc:mysql://localhost:3306/shorturl?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/shorturl?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379
 management:
   endpoints:

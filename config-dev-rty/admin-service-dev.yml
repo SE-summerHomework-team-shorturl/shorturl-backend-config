@@ -1,7 +1,7 @@
 spring:
   cloud:
     consul:
-      host: localhost
+      host: 127.0.0.1
       port: 8500
       discovery:
         service-name: admin-service
@@ -15,19 +15,19 @@ spring:
       client:
         client-id: client
         client-secret: client-secret
-        user-authorization-uri: http://localhost:8000/oauth/authorize
-        access-token-uri: http://localhost:8000/oauth/token
+        user-authorization-uri: http://127.0.0.1:8000/oauth/authorize
+        access-token-uri: http://127.0.0.1:8000/oauth/token
       authorization:
-        check-token-access: http://localhost:8000/oauth/check_token
+        check-token-access: http://127.0.0.1:8000/oauth/check_token
       resource:
-        token-info-uri: http://localhost:8000/oauth/check_token
+        token-info-uri: http://127.0.0.1:8000/oauth/check_token
   datasource:
-    url: jdbc:mysql://localhost:3306/shorturl?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/shorturl?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379 
 management:
   endpoints:
