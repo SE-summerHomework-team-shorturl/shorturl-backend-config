@@ -29,7 +29,6 @@ spring:
         health-check-critical-timeout: 20s
         instanceId: addurl-service:8011
         enabled: true
-        prefer-ip-address: true
 management:
   endpoints:
     web:

@@ -18,7 +18,6 @@ spring:
         health-check-critical-timeout: 20s
         instanceId: redirect-service:8001
         enabled: true
-        prefer-ip-address: true
 management:
   endpoints:
     web:
