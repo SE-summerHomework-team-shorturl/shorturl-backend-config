@@ -5,3 +5,13 @@ spring:
   data:
     mongodb:
       uri: mongodb://47.101.191.189:27017/short_url_db
+management:
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: *

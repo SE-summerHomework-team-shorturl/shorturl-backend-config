@@ -25,3 +25,13 @@ spring:
           uri: lb://user
           predicates:
             - Path=/user/register
+management:
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: *

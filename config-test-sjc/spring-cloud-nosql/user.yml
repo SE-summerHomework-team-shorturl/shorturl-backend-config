@@ -8,3 +8,13 @@ spring:
   redis:
     host: 47.101.191.189
     port: 6380
+management:
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: *
