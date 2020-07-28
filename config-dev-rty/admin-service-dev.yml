@@ -10,6 +10,7 @@ spring:
         health-check-critical-timeout: 20s
         instanceId: admin-service:8051
         enabled: true
+        prefer-ip-address: true
   security:
     oauth2:
       client:

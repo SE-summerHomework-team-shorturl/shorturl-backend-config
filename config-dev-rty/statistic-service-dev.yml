@@ -10,6 +10,7 @@ spring:
         health-check-critical-timeout: 20s
         instanceId: statistic-service:8061
         enabled: true
+        prefer-ip-address: true
     stream:
       rabbit:
         bindings:
