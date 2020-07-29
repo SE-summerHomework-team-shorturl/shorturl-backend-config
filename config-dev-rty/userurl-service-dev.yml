@@ -9,15 +9,9 @@ spring:
     port: 6379
   security:
     oauth2:
-      client:
-        client-id: client
-        client-secret: client-secret
-        user-authorization-uri: http://localhost:8000/oauth/authorize
-        access-token-uri: http://localhost:8000/oauth/token
-      authorization:
-        check-token-access: http://localhost:8000/oauth/check_token
-      resource:
-        token-info-uri: http://localhost:8000/oauth/check_token
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8000/.well-known/jwks.json
   cloud:
     consul:
       host: localhost
@@ -27,7 +21,7 @@ spring:
         healthCheckPath: /actuator/health
         healthCheckInterval: 5s
         health-check-critical-timeout: 20s
-        instanceId: userurl-service:8021
+        instanceId: ${spring.application.name}:${server.port}
         enabled: true
 management:
   endpoints:

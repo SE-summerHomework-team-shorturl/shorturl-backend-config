@@ -16,7 +16,7 @@ spring:
         healthCheckPath: /actuator/health
         healthCheckInterval: 5s
         health-check-critical-timeout: 20s
-        instanceId: redirect-service:8001
+        instanceId: ${spring.application.name}:${server.port}
         enabled: true
 management:
   endpoints:

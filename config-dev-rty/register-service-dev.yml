@@ -16,7 +16,7 @@ spring:
         healthCheckPath: /actuator/health
         healthCheckInterval: 5s
         health-check-critical-timeout: 20s
-        instanceId: register-service:8031
+        instanceId: ${spring.application.name}:${server.port}
         enabled: true
 management:
   endpoints:

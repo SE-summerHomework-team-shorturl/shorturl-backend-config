@@ -11,7 +11,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwt-set-uri: http://localhost:8000/.well-known/jwks.json
+          jwk-set-uri: http://localhost:8000/.well-known/jwks.json
   cloud:
     consul:
       host: localhost
@@ -21,7 +21,7 @@ spring:
         healthCheckPath: /actuator/health
         healthCheckInterval: 5s
         health-check-critical-timeout: 20s
-        instanceId: addurl-service:8011
+        instanceId: ${spring.application.name}:${server.port}
         enabled: true
 management:
   endpoints:
