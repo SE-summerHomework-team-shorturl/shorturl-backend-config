@@ -7,6 +7,13 @@ spring:
   redis:
     host: localhost
     port: 6379
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8000/.well-known/jwks.json
+
   cloud:
     consul:
       host: localhost
@@ -18,6 +25,7 @@ spring:
         health-check-critical-timeout: 20s
         instanceId: addurl-service:8011
         enabled: true
+
 management:
   endpoints:
     web:
