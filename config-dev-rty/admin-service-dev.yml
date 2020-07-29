@@ -8,7 +8,7 @@ spring:
         healthCheckPath: /actuator/health
         healthCheckInterval: 5s
         health-check-critical-timeout: 20s
-        instanceId: admin-service:8051
+        instanceId: ${spring.application.name}:${server.port}
         enabled: true
   security:
     oauth2:
