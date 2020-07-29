@@ -9,3 +9,8 @@ spring:
   jpa:
     open-in-view: false
     database: mysql
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
