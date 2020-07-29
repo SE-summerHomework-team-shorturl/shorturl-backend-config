@@ -12,6 +12,11 @@ spring:
   redis:
     host: redis
     port: 6379
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://gateway:8080/.well-known/jwks.json
 management:
   endpoints:
     web:
