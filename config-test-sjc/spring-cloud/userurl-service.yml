@@ -17,6 +17,12 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://gateway:8080/.well-known/jwks.json
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      use-key-prefix: true
+      time-to-live: 600000
 management:
   endpoints:
     web:
