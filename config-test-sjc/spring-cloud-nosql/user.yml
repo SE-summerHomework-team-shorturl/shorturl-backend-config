@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://47.101.191.189:27017/short_url_db
+      uri: mongodb://mongo:27017/short_url_db
   redis:
     host: redis-noeviction
     port: 6379
