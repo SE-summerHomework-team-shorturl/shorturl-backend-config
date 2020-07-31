@@ -16,7 +16,7 @@ spring:
           dpb-exchange:
             consumer:
               prefetch: 30
-              concurrency: 3
+              concurrency: 10              
   rabbitmq:
     host: localhost
     username: guest
