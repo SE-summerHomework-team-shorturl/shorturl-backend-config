@@ -1,18 +1,18 @@
 server:
-  port: 0
+  port: 8080
   shutdown: graceful
 spring:
   security:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://47.102.118.113:8080/.well-known/jwks.json
+          jwk-set-uri: http://gateway:8080/.well-known/jwks.json
   data:
     mongodb:
-      uri: mongodb://47.101.191.189:27017/short_url_db
+      uri: mongodb://mongo:27017/short_url_db
   redis:
-    host: 47.101.191.189
-    port: 6380
+    host: redis-noeviction
+    port: 6379
 management:
   endpoint:
     health:
@@ -22,4 +22,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: "*"
