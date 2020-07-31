@@ -12,4 +12,4 @@ spring:
       uri: mongodb://localhost:27017/short_url_db
   redis:
     host: localhost
-    port: 6385
+    port: 6379
