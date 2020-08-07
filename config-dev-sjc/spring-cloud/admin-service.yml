@@ -10,7 +10,7 @@ spring:
     open-in-view: false
     database: mysql
   redis:
-    host: redis
+    host: localhost
     port: 6380
   security:
     oauth2:
