@@ -1,26 +1,30 @@
+server:
+  port: 0
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:mysql://localhost:3306/shorturl?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/short_url_db?serverTimezone=GMT%2B8
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
+    database: mysql
   redis:
-    host: localhost
-    port: 6379
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/short_url_db
-  cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        service-name: redirect-service
-        healthCheckPath: /actuator/health
-        healthCheckInterval: 5s
-        health-check-critical-timeout: 20s
-        instanceId: redirect-service:8001
-        enabled: true
+    host: redis
+    port: 6380
+  rabbitmq:
+    host: rabbitmq
+    username: guest
+    password: guest
+    virtual-host: /
+    port: 5672
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      use-key-prefix: true
 management:
   endpoints:
     web:

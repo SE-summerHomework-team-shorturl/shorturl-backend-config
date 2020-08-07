@@ -1,3 +1,5 @@
+server:
+  port: 8080
 spring:
   cloud:
     gateway:
@@ -6,20 +8,10 @@ spring:
           enabled: true
       globalcors:
         corsConfigurations:
-          '[/**]':
+          "[/**]":
             allowedMethods: "*"
             allowedHeaders: "*"
             allowedOrigins: "*"
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        service-name: gateway
-        healthCheckPath: /actuator/health
-        healthCheckInterval: 5s
-        health-check-critical-timeout: 20s
-        instanceId: gateway:8080
-        enabled: true
 management:
   endpoints:
     web:
