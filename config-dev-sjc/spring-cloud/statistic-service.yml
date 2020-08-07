@@ -17,7 +17,7 @@ spring:
             consumer:
               prefetch: 30
   rabbitmq:
-    host: rabbitmq
+    host: localhost
     username: guest
     password: guest
     virtual-host: /
