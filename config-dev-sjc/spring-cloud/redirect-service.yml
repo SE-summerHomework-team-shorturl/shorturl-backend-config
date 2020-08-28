@@ -14,6 +14,9 @@ spring:
   redis:
     host: localhost
     port: 6380
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/short_url_db
   rabbitmq:
     host: localhost
     username: guest

@@ -12,6 +12,9 @@ spring:
   redis:
     host: localhost
     port: 6380
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/short_url_db
   security:
     oauth2:
       resourceserver:
@@ -22,9 +25,6 @@ spring:
     redis:
       cache-null-values: false
       use-key-prefix: true
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/short_url_db
 management:
   endpoints:
     web:

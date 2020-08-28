@@ -9,6 +9,12 @@ spring:
   jpa:
     open-in-view: false
     database: mysql
+  redis:
+    host: localhost
+    port: 6380
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/short_url_db
 management:
   endpoints:
     web:
