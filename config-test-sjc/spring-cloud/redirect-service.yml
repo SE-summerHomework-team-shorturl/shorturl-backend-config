@@ -14,6 +14,9 @@ spring:
   redis:
     host: redis
     port: 6379
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017/short_url_db
   rabbitmq:
     host: rabbitmq
     username: guest
@@ -25,7 +28,6 @@ spring:
     redis:
       cache-null-values: false
       use-key-prefix: true
-      time-to-live: 600000
 management:
   endpoints:
     web:
