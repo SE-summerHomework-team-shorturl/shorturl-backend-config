@@ -14,7 +14,7 @@ spring:
     port: 6379
   data:
     mongodb:
-      uri: mongodb://mongodb:27017/short_url_db
+      uri: mongodb://mongo:27017/short_url_db
   security:
     oauth2:
       resourceserver:
